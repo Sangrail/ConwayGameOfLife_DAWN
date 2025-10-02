@@ -1,0 +1,65 @@
+# --------------------------
+# OS junk
+# --------------------------
+.DS_Store
+
+# --------------------------
+# Editor/IDE caches
+# --------------------------
+.zed/
+.vscode/
+.idea/
+.cache/
+.clangd/
+*.swp
+*.swo
+
+# --------------------------
+# C/C++ build artefacts
+# --------------------------
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.dSYM/
+
+# --------------------------
+# CMake (generated files only)
+# keep your CMakeLists.txt and any real *.cmake you authored
+# --------------------------
+/build/
+/build-*/
+/cmake-build-*/
+/CMakeFiles/
+/CMakeCache.txt
+CMakeScripts/
+Testing/
+CTestTestfile.cmake
+Makefile
+install_manifest.txt
+compile_commands.json
+
+# --------------------------
+# WebAssembly/Emscripten artefacts
+# (in case you emit outside build-web/)
+# --------------------------
+*.wasm
+*.wasm.map
+*.wasm.br
+*.data
+*.js
+*.js.map
+*.worker.js
+*.html
+
+# --------------------------
+# Logs and misc
+# --------------------------
+*.log
