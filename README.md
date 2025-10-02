@@ -2,9 +2,35 @@
 
 # WebGPU cross-platform app with CMake/Emscripten
 
-This app is a <em>minimalistic</em> C++ example that shows how to use [WebGPU](https://gpuweb.github.io/gpuweb/) to build desktop and web apps from a single codebase. Under the hood, it uses WebGPU's [webgpu.h](https://github.com/webgpu-native/webgpu-headers/blob/main/webgpu.h) as a stable and platform-agnostic hardware abstraction layer through a C++ wrapper called [webgpu_cpp.h](https://source.chromium.org/chromium/chromium/src/+/main:third_party/dawn/include/webgpu/webgpu_cpp.h). Note that this wrapper is subject to change.
 
-On the web, the app is built against [Emdawnwebgpu](https://dawn.googlesource.com/dawn/+/refs/heads/main/src/emdawnwebgpu/) (Emscripten Dawn WebGPU), which has bindings implementing webgpu.h on top of the JavaScript API. It uses [Emscripten](https://emscripten.org/), a tool for compiling C/C++ programs to WebAssembly. On specific platforms such as macOS or Windows, this project can be built against [Dawn](https://dawn.googlesource.com/dawn/), Chromium's cross-platform WebGPU implementation. While webgpu.h is considered stable, this stability doesn't include extensions added by Emdawnwebgpu or Dawn.
+# Extensions in this fork
+
+This project is based on the excellent work by beaufortfrancois (see original repository), which provided the foundation for a minimalistic C++ example showing how to use WebGPU to build desktop and web apps from a single codebase. That implementation demonstrates WebGPU’s webgpu.h through the C++ wrapper webgpu_cpp.h.
+
+On the web, the app is built against Emdawnwebgpu (Emscripten Dawn WebGPU), which maps WebGPU calls onto the browser’s JavaScript API. It uses Emscripten to compile C/C++ to WebAssembly. On platforms such as macOS or Windows, the app instead targets Dawn, Chromium’s cross-platform WebGPU implementation.
+
+### Desktop Results
+
+![image1](./imgs/desktop_webgpu.png)
+
+### Web WebAssembly/WebGPU Results
+
+![image2](./imgs/web_webgpu.png)
+
+In addition to the base example, this fork extends the demo into a fully interactive version of Conway’s Game of Life:
+
+- Mouse interaction:
+- Left-click turns a cell on (alive).
+- Right-click turns a cell off (dead).
+- Pointer updates write directly into the storage buffers, so edits are reflected immediately in the simulation.
+
+This interactivity builds on the original JavaScript tutorial, which you can find here:
+Original Game of Life tutorial in JS
+
+## Credits
+
+- [beaufortfrancois/webgpu-cross-platform-app](https://github.com/beaufortfrancois/webgpu-cross-platform-app) — Original cross-platform C++ WebGPU example that this project is built upon (setups up a pipeline to render a single static triangle).
+- [Your first WebGPU app (Google Codelab)](https://codelabs.developers.google.com/your-first-webgpu-app#0) — Original JavaScript tutorial for Conway’s Game of Life, which inspired the port to C++ with Dawn.
 
 ## Setup
 
@@ -17,7 +43,7 @@ git submodule update --init
 
 ## Requirements
 
-<i>Instructions are for macOS; they will need to be adapted to work on Linux and Windows.</i>
+<i>Instructions are for **macOS**; they will need to be adapted to work on Linux and Windows.</i>
 
 ```sh
 # Make sure CMake and Emscripten are installed.
