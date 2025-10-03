@@ -28,7 +28,7 @@ This interactivity builds on the original JavaScript tutorial, which you can fin
 
 ## Credits
 
-- [beaufortfrancois/webgpu-cross-platform-app](https://github.com/beaufortfrancois/webgpu-cross-platform-app) — Original cross-platform C++ WebGPU example that this project is built upon (setups up a pipeline to render a single static triangle).
+- [beaufortfrancois/webgpu-cross-platform-app](https://github.com/beaufortfrancois/webgpu-cross-platform-app) — Original cross-platform C++ WebGPU example that this project is built upon. This example sets up a pipeline to render a single static triangle.
 - [Your first WebGPU app (Google Codelab)](https://codelabs.developers.google.com/your-first-webgpu-app#0) — Original JavaScript tutorial for Conway’s Game of Life, which inspired the port to C++ with Dawn.
 
 ## Setup
