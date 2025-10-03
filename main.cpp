@@ -1,3 +1,19 @@
+/*
+ * WebGPU Game of Life Demo with Dawn + GLFW
+ * Author: J. Coleman
+ * Date: 3-OCT-2025
+ *
+ * DISCLAIMER:
+ *   This demo code is meant to illustrate using WebGPU via Dawn, on both Desktop (GLFW) and Web (Emscripten).
+ *   Code style is kept simple for clarity and easy reading. Not intended for production use.
+ *   Based on:
+ *      - https://github.com/beaufortfrancois/webgpu-cross-platform-app
+ *      - https://codelabs.developers.google.com/your-first-webgpu-app#0
+ *
+ *   Essentially ports the JS tutorial to c++, on Dawn.
+ */
+
+
 #include <array>
 #include <chrono>
 #include <cstdint>
