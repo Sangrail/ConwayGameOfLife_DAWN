@@ -24,8 +24,7 @@ In addition to the base example, this fork extends the demo into a fully interac
 - Right-click turns a cell off (dead).
 - Pointer updates write directly into the storage buffers, so edits are reflected immediately in the simulation.
 
-This interactivity builds on the original JavaScript tutorial, which you can find here:
-Original Game of Life tutorial in JS
+This interactivity builds on the original JavaScript tutorial, which you can find linked in the credits below.
 
 ## Credits
 
