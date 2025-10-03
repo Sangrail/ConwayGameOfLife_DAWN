@@ -80,11 +80,13 @@ void ConfigureSurface() {
   g_config.device = g_device;
   g_config.format = g_format;
   g_config.usage = wgpu::TextureUsage::RenderAttachment;
+
 #if defined(__EMSCRIPTEN__)
   g_config.alphaMode = wgpu::CompositeAlphaMode::Premultiplied; // typical for canvas
 #else
   g_config.alphaMode = wgpu::CompositeAlphaMode::Auto;
 #endif
+
   g_config.width = WIDTH;
   g_config.height = HEIGHT;
   g_config.presentMode = wgpu::PresentMode::Fifo;
