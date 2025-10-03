@@ -35,8 +35,8 @@ This interactivity builds on the original JavaScript tutorial, which you can fin
 
 ```sh
 # Clone repository and initialize submodules.
-git clone https://github.com/beaufortfrancois/webgpu-cross-platform-app.git
-cd webgpu-cross-platform-app/
+git clone https://github.com/Sangrail/ConwayGameOfLife_DAWN.git
+cd ConwayGameOfLife_DAWN/
 git submodule update --init
 ```
 
